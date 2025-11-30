@@ -5,7 +5,7 @@ int isPrimeNumber(int num)
     for(int i = 2; i < num; i++)
     {
         if(num % i == 0)
-            return 0; // If divisible, it's not a prime number
+            return 0;
     }
     return 1;
 }
@@ -15,10 +15,8 @@ int main()
     int start_num, end_num, i;
 
     printf("\t\t\t***Prime Number Finder***\n\n");
-
     printf("Enter Starting Number = ");
     scanf("%d", &start_num);
-
     printf("Enter Ending Number = ");
     scanf("%d", &end_num);
 
@@ -35,7 +33,7 @@ int main()
         i++;
     }
 
-    printf("\n"); // Add a newline for clean output
+    printf("\n"); 
 
     return 0;
 }
