@@ -1,17 +1,12 @@
 #include<stdio.h>
 
-// Function to check if a number is prime
 int isPrimeNumber(int num)
 {
-    // A prime number is greater than 1
-    // Optimization: check up to sqrt(num), but the original logic is okay for small numbers.
-    // However, numbers 0 and 1 are not prime. This check is handled outside in main for numbers <= 1.
     for(int i = 2; i < num; i++)
     {
         if(num % i == 0)
             return 0; // If divisible, it's not a prime number
     }
-    // If the loop completes, it is prime (assuming num >= 2)
     return 1;
 }
 
@@ -27,18 +22,14 @@ int main()
     printf("Enter Ending Number = ");
     scanf("%d", &end_num);
 
-    // Start iteration from 'start_num', but if start_num <= 1, start from 2
     i = (start_num <= 1) ? 2 : start_num;
 
-    // Corrected format specifier: "%d and %d"
     printf("Prime Numbers Between %d and %d = ", start_num, end_num);
 
     while(i <= end_num)
     {
-        // Check if the number 'i' is prime
         if(isPrimeNumber(i))
         {
-            // Corrected: print the number 'i' itself, with a space
             printf("%d ", i);
         }
         i++;
